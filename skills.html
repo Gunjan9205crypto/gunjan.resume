@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Gunjan Dhakate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Gunjan.</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="skills.html" class="active">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="skills-flash">
+  <h2>My <span>Technical Skills</span></h2>
+  <p class="tagline">Technologies, tools, and concepts I have worked with</p>
+
+  <div class="flashcard-container">
+
+    <!-- CARD 1 -->
+    <div class="flashcard active">
+      <h3>C / C++</h3>
+      <p>
+        Strong foundation in procedural and object-oriented programming.<br><br>
+        Experience in writing memory-efficient code, embedded programming for microcontrollers,
+        pointers, data structures, and real-time logical implementations.
+      </p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="flashcard">
+      <h3>HTML & CSS</h3>
+      <p>
+        Skilled in modern web development, responsive layouts, flexbox, grid,
+        UI styling, and component-based design. Able to convert UI wireframes
+        into interactive, professional web interfaces.
+      </p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="flashcard">
+      <h3>Artificial Intelligence & ML</h3>
+      <p>
+        Hands-on with supervised & unsupervised ML algorithms, model training,
+        feature engineering, evaluation metrics (RMSE, F1, accuracy),
+        classification, regression, and deployment-ready ML pipelines.
+      </p>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="flashcard">
+      <h3>Data Science</h3>
+      <p>
+        Proficient in data preprocessing, EDA, statistical analysis,
+        visualization, NumPy, Pandas, and identifying trends for decision
+        making using real datasets.
+      </p>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="flashcard">
+      <h3>IoT & Automation</h3>
+      <p>
+        Experience with Arduino, sensors, actuators, communication protocols (I2C, UART),
+        automation systems, IoT hardware integration, real-time monitoring, and smart
+        embedded solutions.
+      </p>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button onclick="prevCard()">⟵</button>
+    <button onclick="nextCard()">⟶</button>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <p>© 2025 Gunjan Dhakate · All Rights Reserved.</p>
+</footer>
+
+<script>
+let index = 0;
+const cards = document.querySelectorAll('.flashcard');
+
+// Auto-flip every 3 sec
+setInterval(nextCard, 3000);
+
+function showCard(i) {
+  cards.forEach(card => card.classList.remove('active'));
+  cards[i].classList.add('active');
+}
+
+function nextCard() {
+  index = (index + 1) % cards.length;
+  showCard(index);
+}
+
+function prevCard() {
+  index = (index - 1 + cards.length) % cards.length;
+  showCard(index);
+}
+</script>
+
+</body>
+</html>

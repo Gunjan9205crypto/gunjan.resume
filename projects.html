@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Gunjan Dhakate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Gunjan.</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html"class="active">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+  <section class="projects-section">
+  <h2 class="reveal">My <span>Projects</span></h2>
+  <p class="section-tagline reveal">A showcase of the work I have done</p>
+
+  <div class="projects-grid">
+
+    <div class="project-card reveal">
+      <h3>Smart Doorlock System</h3>
+      <p>Password-protected automated door locking using keypad & servo motor.</p>
+      <button class="btn primary" onclick="openModal('door')">View Details</button>
+    </div>
+
+    <div class="project-card reveal">
+      <h3>Smart Medicine Reminder</h3>
+      <p>IoT-based medicine notification system using RTC & Arduino.</p>
+      <button class="btn primary" onclick="openModal('med')">View Details</button>
+    </div>
+
+    <div class="project-card reveal">
+      <h3>Loan Defaulter Prediction</h3>
+      <p>Predicts high-risk borrowers using Random Forest & XGBoost.</p>
+      <button class="btn primary" onclick="openModal('loan')">Open Notebook</button>
+    </div>
+
+    <div class="project-card reveal">
+      <h3>AI Interview Trainer Agent</h3>
+      <p>Evaluates answers using NLP & AI to improve interview performance.</p>
+      <button class="btn primary" onclick="openModal('ai')">Watch Demo</button>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- MODALS -->
+
+<div class="modal" id="door">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('door')">&times;</span>
+    <h2>Smart Doorlock System</h2>
+    <p>
+      An Arduino-based digital door lock system using a keypad for password entry.
+      The correct password activates a servo motor to unlock the door.
+      <br><br><strong>Tech Stack:</strong> Arduino Uno, 4x4 Keypad, Servo Motor, Buzzer
+      <br><strong>Outcome:</strong> Enhances home security without physical keys.
+    </p>
+  </div>
+</div>
+
+<div class="modal" id="med">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('med')">&times;</span>
+    <h2>Smart Medicine Reminder</h2>
+    <p>
+      Alerts users at correct dosage time using RTC, LCD, and a buzzer.
+      <br><br><strong>Tech Stack:</strong> Arduino Uno, DS1307 RTC, LCD Display
+      <br><strong>Purpose:</strong> Helps elderly patients maintain medication schedule.
+    </p>
+  </div>
+</div>
+
+<div class="modal" id="loan">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('loan')">&times;</span>
+    <h2>Loan Defaulter Prediction</h2>
+    <p>
+      ML model predicting loan repayment capability.
+      <br><br><strong>Algorithms:</strong> Random Forest, XGBoost, AdaBoost
+      <br><strong>Outcome:</strong> Assists banks in reducing credit risk.
+    </p>
+  </div>
+</div>
+
+<div class="modal" id="ai">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ai')">&times;</span>
+    <h2>AI Interview Trainer Agent</h2>
+    <p>
+      Uses NLP to evaluate user responses and provide feedback.
+      <br><br><strong>Platform:</strong> IBM Watsonx
+      <br><strong>Goal:</strong> Improve interview skills & confidence.
+    </p>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2025 Gunjan Dhakate · All Rights Reserved.</p>
+</footer>
+
+<script>
+function openModal(id){ document.getElementById(id).style.display="flex"; }
+function closeModal(id){ document.getElementById(id).style.display="none"; }
+</script>
+
+</body>
+</html>
